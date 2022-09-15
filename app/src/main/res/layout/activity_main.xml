@@ -6,25 +6,60 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
+
+    <EditText
+        android:id="@+id/etName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="59dp"
+        android:ems="10"
+        android:hint="enter name"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="47dp"
+        android:ems="10"
+        android:hint="enter password"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
 
     <Button
         android:id="@+id/btnfcmtoken"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="91dp"
-        android:layout_marginTop="180dp"
-        android:text="Fcm token"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="216dp"
         android:onClick="getRegnTokenFCM"
+        android:text="Fcm token"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/btnPut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:onClick="putFirestore"
+        android:text="put"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnGet"
+        app:layout_constraintEnd_toEndOf="@+id/btnfcmtoken" />
+
+    <Button
+        android:id="@+id/btnGet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="35dp"
+        android:onClick="getFireStore"
+        android:text="get"
+        app:layout_constraintStart_toEndOf="@+id/btnPut"
+        app:layout_constraintTop_toBottomOf="@+id/btnfcmtoken" />
 </androidx.constraintlayout.widget.ConstraintLayout>
